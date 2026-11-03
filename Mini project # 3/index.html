@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiddieMath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="site-header">
+        <img src="./assets/images/logo-removebg-preview.png" alt="KiddieMath logo" width="50" height="50">
+        <a href="" class="brand">KiddieMath</a>
+        <nav>
+            <a href="">Lessons</a>
+            <a href="">Games</a>
+        </nav>
+    </div>
+    
+    <section id="hero">
+        <img class="hero-bg" src="hehe.jpg" alt="">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Let's Play With Numbers</h1>
+            <p>Pick a game or lesson to start today</p>
+        </div>
+    </section>
+
+    <section id="topics">
+        <h2>Pick a topic</h2>
+        <div class="topic-grid">
+            <button class="topic-card addition" onclick="goToTopic('addition')">
+                <img class="icon" src="./assets/images/addition.png" alt="Addition">
+                Addition
+            </button>
+            <button class="topic-card subtraction" onclick="goToTopic('subtraction')">
+                <img class="icon" src="./assets/images/subtraction.png" alt="Substraction">
+                Substraction
+            </button>
+            <button class="topic-card multiplication" onclick="goToTopic('multiplication')">
+                <img class="icon" src="./assets/images/multiplication.png" alt="Multiplication">
+                Multiplication
+            </button>
+            <button class="topic-card division" onclick="goToTopic('division')">
+                <img class="icon" src="./assets/images/division.png" alt="Division">
+                Division
+            </button>
+        </div>
+    </section>
+
+
+
+    <section id="practice">
+        <button class="back-btn" onclick="backToTopics()">&larr; Back to topics</button>
+        <h2 id="practice-title">Addition</h2>
+ 
+        <div class="problem-box">
+            <span class="num" id="num1">0</span>
+            <span class="op" id="operator">+</span>
+            <span class="num" id="num2">0</span>
+            <span class="equals-sign">=</span>
+            <input type="number" id="answer-input" inputmode="numeric" placeholder="?">
+        </div>
+ 
+        <button id="check-btn" onclick="checkAnswer()">Check</button>
+ 
+        <p id="feedback"></p>
+        <p id="score">Score: <span id="score-value">0</span></p>
+    </section>
+
+    <footer id="site-footer">
+        <p>Mini Project # 3 @ 2026</p>
+    </footer>
+ 
+   <script src="script.js"></script>
+</body>
+</html>
